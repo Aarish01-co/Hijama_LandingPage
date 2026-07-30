@@ -116,13 +116,53 @@ img {
   }
 }
 
+/* Top Location Announcement Banner */
+.top-banner {
+  background: linear-gradient(90deg, #132B45 0%, #1E3A5F 100%);
+  color: #FFFFFF;
+  padding: 8px 0;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  width: 100%;
+}
+
+.top-banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.banner-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.banner-tag svg {
+  flex-shrink: 0;
+}
+
+.banner-bullet {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.banner-subtext {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 /* Header & Navigation */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 24px 0;
+  padding: 0 0 20px 0;
   z-index: 1000;
   transition: var(--transition-smooth);
   
@@ -137,7 +177,7 @@ img {
     background-color: rgba(244, 241, 230, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    padding: 16px 0;
+    padding: 0 0 14px 0;
     box-shadow: 0 10px 30px rgba(50, 66, 51, 0.05);
     border-bottom: 1px solid rgba(74, 92, 69, 0.08);
   }
@@ -147,6 +187,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 16px;
 }
 
 /* Premium Text Logo */
@@ -1318,25 +1359,52 @@ img {
     font-size: 15px;
   }
   
-  .header {
-    padding: 16px 0;
+  .top-banner {
+    padding: 6px 0;
+    font-size: 0.78rem;
   }
   
-  /* Modern CSS mobile navigation slider or simple responsive flex wrap (no JS allowed) */
-  /* For this design, navigation links will wrap cleanly or center under the logo */
+  .banner-bullet, .banner-subtext {
+    display: none;
+  }
+  
+  .header {
+    padding: 0 0 12px 0;
+  }
+  
   .nav-container {
+    margin-top: 10px;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
   }
   
   .nav-menu {
-    gap: 20px;
+    gap: 16px;
     flex-wrap: wrap;
     justify-content: center;
   }
   
+  .badge {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    text-align: center;
+    white-space: normal;
+  }
+  
+  .physician-pill {
+    font-size: 0.72rem;
+    padding: 6px 14px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    line-height: 1.4;
+  }
+  
+  .doctor-title {
+    font-size: 2.5rem;
+  }
+  
   .hero {
-    padding-top: 160px;
+    padding-top: 170px;
   }
   
   .hero-title {
@@ -1357,15 +1425,39 @@ img {
 }
 
 @media (max-width: 480px) {
+  .top-banner {
+    font-size: 0.75rem;
+  }
+  
+  .badge {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+  }
+  
+  .physician-pill {
+    font-size: 0.68rem;
+    padding: 6px 12px;
+  }
+  
+  .doctor-title {
+    font-size: 2.1rem;
+  }
+  
   .hero-actions {
     flex-direction: column;
     width: 100%;
     gap: 12px;
   }
   
-  .btn-primary, .btn-secondary, .btn-large {
+  .btn-primary, .btn-secondary, .btn-large, .btn-navy-primary, .btn-navy-outline {
     width: 100%;
-    padding: 14px 28px;
+    padding: 14px 24px;
+  }
+  
+  .about-cta-group {
+    width: 100%;
+    flex-direction: column;
   }
   
   .trust-grid {
@@ -1381,6 +1473,6 @@ img {
   }
   
   .nav-menu {
-    gap: 14px;
+    gap: 12px;
   }
 }
